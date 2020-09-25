@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>yourLife</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<script type="text/javascript" src="home.js"></script>
+
+</head>
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">yourLife</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#todo-list">ToDo List</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#motivational-playlist">Playlists</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#gallery">Gallery</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#gJ">Journal</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#self-help">Self Help</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#success-story">Success Story</a>
+	    </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      	<button id="btnLogout" class="btn btn-action">Log out</button>
+    </form>
+  </div>
+</nav>
+
+
+<!--- QOUTE  -->
+
+	<div class="jumbotron">
+		<div class="random-quote text-center">
+			<span class="qoutes">"</span><span class="qoute-highlight">Life</span> is <span  class="qoute-highlight">10%</span> what <span class="qoute-highlight">happens</span> and <span  class="qoute-highlight">90%</span> how you <span class="qoute-highlight">react</span> to it.<span class="qoutes">"</span>
+
+			<br>Charles R. Swindoll
+		</div>	
+	</div>
+
+<!--- TODO 1/2 |||||| Motivational Playlists 1/2 -->
+
+<div class="container-fluid padding" id="todo-list">
+	
+	<div class="row">
+		
+		<div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+			<div class="affirmations">
+				
+			</div>
+		</div>
+		
+		<div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" id="motivational-playlist">
+			
+			<h1 class="moto-header text-center">MOTIVATIONAL PLAYLIST</h1>
+
+			<div class="vid-container">
+				<iframe id="vid_frame" width="836" height="480" src="https://www.youtube.com/embed/Z9-5dZ0HKbU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+
+			<div class="vid-list-container">
+		
+				<div class="vid-list">
+					<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/l7tGrbqhTTY?autoplay=1&rel=0&showinfo=0&autohide=1'">
+						<div class="thumb">
+							<img src="http:/img.youtube.com/vi/l7tGrbqhTTY/0.jpg" alt="" />
+						</div>
+						<div class="desc">
+							Jay Shetty
+						</div>
+					</div>
+
+					<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/6S9E0MVteEc?autoplay=1&rel=0&showinfo=0&autohide=1'">
+						<div class="thumb">
+							<img src="http:/img.youtube.com/vi/6S9E0MVteEc/0.jpg" alt="" />
+						</div>
+						<div class="desc">
+							Jay Shetty
+						</div>
+					</div>
+
+				<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Fv9Ye9s2hTw?autoplay=1&rel=0&showinfo=0&autohide=1'">
+						<div class="thumb">
+							<img src="http:/img.youtube.com/vi/Fv9Ye9s2hTw/0.jpg" alt="" />
+						</div>
+						<div class="desc">
+							Garyvee
+						</div>
+					</div>
+
+					<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/7esMc2crf_A?autoplay=1&rel=0&showinfo=0&autohide=1'">
+						<div class="thumb">
+							<img src="http:/img.youtube.com/vi/7esMc2crf_A/0.jpg" alt="" />
+						</div>
+						<div class="desc">
+							Valuetainment
+						</div>
+					</div>
+
+					<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/qBY9ur5ASZY?autoplay=1&rel=0&showinfo=0&autohide=1'">
+						<div class="thumb">
+							<img src="http:/img.youtube.com/vi/qBY9ur5ASZY/0.jpg" alt="" />
+						</div>
+						<div class="desc">
+							Valuetainment
+						</div>
+					</div>
+
+				</div>
+
+				</div>
+
+				<div class="arrows">
+					<div class="arrow-left" id="ar-left">
+						<i class="fa fa-chevron-left fa-lg"></i>
+					</div>
+					<div class="arrow-right" id="ar-right">
+						<i class="fa fa-chevron-right fa-lg"></i>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		    $(".arrow-right").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "+=336"
+		        }, 750);
+		    });
+		    $(".arrow-left").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "-=336"
+		        }, 750);
+		    });
+		});
+</script>
+
+<!--- GALLERY -->
+
+<div class="photo-grid" id="gallery">
+
+		<h3 class="photo-grid-header text-center">GALLERY</h3>
+
+	<div class="row-photo-grid"> 
+	  <div class="column">
+	    <img src="img/gallery1.jpg" style="width:100%">
+	    <img src="img/gallery3.jpg" style="width:100%">
+	  </div>
+	  <div class="column">
+	    <img src="img/gallery12.jpg" style="width:100%">
+	    <img src="img/gallery6.jpg" style="width:100%">
+	    <img src="img/gallery9.jpg" style="width:100%">
+	  </div>  
+	  <div class="column">
+	    <img src="img/gallery8.jpg" style="width:100%">
+	    <img src="img/gallery4.jpg" style="width:100%">
+	  </div>
+	  <div class="column">
+	    <img src="img/gallery11.jpg" style="width:100%">
+	    <img src="img/gallery10.jpg" style="width:100%">
+	  </div>
+	</div>
+
+</div>
+
+
+
+<!--- selfhelp -->
+
+<div class="container-fluid padding" id="self-help">
+
+	<h1 class="selfhelp-header text-center">SELF HELP</h1>
+
+	<div class="selfhelp">
+
+		<div class="row">
+		
+			<div class="col-sm-12 col-xs-12 col-md-12 col-lg-9">
+				
+				<p>
+					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+				</p>
+				<p>
+					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web--
+
+					Check out more about it, by clicking on the button below!
+				</p>
+				<p>
+					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web--
+
+					Check out more about it, by clicking on the button below!
+				</p>
+
+
+			</div>
+
+			<div class="col-sm-12 col-xs-12 col-md-12 col-lg-3">
+				
+				<img src="./img/self-help.jpg" class="img-responsive">
+
+			</div>
+
+		</div>
+
+				<!-- See more about selfhelp in modal
+			 like videos, img, articles,etc.
+		 -->
+
+		<div class="wrapper">
+			<button type="button" onclick="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">See More!</button>
+		</div>
+
+		  <!-- Modal -->
+		  <div class="modal fade" id="myModal" role="dialog">
+		    	<div class="modal-dialog modal-lg">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        	<div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <div class="modal-title">
+			          	<a href=""><i class="fab fa-facebook-f"></i></a>
+			          	<a href=""><i class="fab fa-snapchat-ghost"></i></a>
+			          	<a href=""><i class="fab fa-instagram"></i></a>
+			          	<a href=""><i class="fab fa-google-plus-g"></i></a>
+			          	<a href=""><i class="fab fa-twitter"></i></a>
+			          </div>
+		        	</div>
+		       		<div class="modal-body">
+		         
+						<div class="container-fluid">
+
+							<div class="row">
+								
+								<div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+									<img src="./img/cart-1.jpg" class="img-responsive">
+								</div>
+								<div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+									<span>
+										Subscribe him on Youtube!
+										 For Best Investing Tips<br>
+										 <a href="">
+								          	<a href=""><i class="fab fa-youtube"></i></a>
+										 </a>
+									</span>
+
+								</div>
+								<div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yiXC17zkDEQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+		       	 	</div>
+
+		        	<div class="modal-footer">
+		          		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        	</div>
+		      </div>
+		      
+		    </div>
+		  </div>
+
+	</div>
+
+</div>
+
+
+<!--- Schedules -->
+
+<!-- <div class="container-fluid">
+	
+	<div class="row">
+		
+
+
+	</div>
+
+</div> -->
+
+<!--- Gratitude Journal -->
+
+<div class="container-fluid padding" id="gJ">
+
+	<h1 class="gratitude-journal-header text-center">GRATITUDE JOURNAL</h1>
+	
+	<div class="row">
+	
+		<div class="col-sm-12 col-xs-12 col-md-12 col-lg-9">
+			
+			<p>
+				<span class="p-highlight">You should start and end</span> your day with <span class="p-highlight">gratitude!</span>
+				<span class="p-highlight">Someone</span> is <span class="p-highlight">doing much better than</span>, <span class="p-highlight">despite having worst conditions than you,
+				despite having less IQ, despite having builled upon, despite having less knowledge,
+				You know why? They have that burning desire in them</span><i class="em em-fire"></i>
+				Every Successful person in this world starts thier day with gratitude, it helps your
+				sub-concious mind filled with inner happiness and notice more gratitude in yourLife.
+				You will start <span class="p-highlight">noticing</span> more <span class="p-highlight">happiness</span> rather then those <span class="p-highlight">temporary sadness!</span>
+				<span class="p-highlight">Writing it down is the BEST WAY to remember it</span>, so develop a habit of writing about
+				<span class="p-highlight">What are you blessed with in life?</span>
+				Either on a paper (best way), or here, on a notepad!
+			</p>
+
+		</div>
+
+		<div class="col-sm-12 col-xs-12 col-md-12 col-lg-3">
+
+			<img src="./img/gratitude-1.jpg" class="img-responsive">
+
+		</div>
+	
+	</div>
+		<!-- make your own gratitude journal.
+	 -->
+	
+	<div class="wrapper">
+		<button type="button" onclick="" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Make mine!</button>
+  		<button type="button" class="btn btn-default hide" data-dismiss="modal">Close</button>
+	</div>
+
+	 <!-- Modal -->
+		  <div class="modal fade" id="myModal2" role="dialog">
+		    	<div class="modal-dialog modal-lg">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        	<div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">
+			          	Add your Gratitudes
+			          </h4>
+		        	</div>
+		       		<div class="modal-body">
+						<textarea class="form-control" rows="5" id="gratitude-journal">Write your blessing/blessings, dude!</textarea>
+		       	 	</div>
+
+		        	<div class="modal-footer">
+		        		<button type="button" class="btn btn-custom" onclick="addGJ()" id="addGJ">Add</button>
+		          		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        	</div>
+		      </div>
+		      
+		    	</div>
+		  </div>
+
+</div>
+
+<!--- Success Stories -->
+
+<h1 class="success-stories-header text-center">SUCCESS STORIES</h1>
+
+<div class="container-fluid padding" id="success-story">
+	
+	<div class="row">
+	
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			<div class="story-card">
+				
+				<div class="story-card-header text-center">
+					TITLE
+				</div>
+				<div class="story-card-content">
+					<p>
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+					</p>					
+				</div>
+
+			</div>
+		</div>	
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			<div class="story-card">
+				
+				<div class="story-card-header text-center">
+					TITLE
+				</div>
+				<div class="story-card-content">
+					<p>
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+					</p>					
+				</div>
+
+			</div>			
+		</div>	
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			<div class="story-card">
+				
+				<div class="story-card-header text-center">
+					TITLE
+				</div>
+				<div class="story-card-content">
+					<p>
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+					</p>					
+				</div>
+
+			</div>	
+		</div>	
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			<div class="story-card">
+				
+				<div class="story-card-header text-center">
+					TITLE
+				</div>
+				<div class="story-card-content">
+					<p>
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!--- FOI -->
+
+<div class="container-fliud">
+	
+	<div class="row">
+		
+
+	</div>
+
+</div>
+
+<!-- Share your hustle story! -->
+
+<div class="container-fluid padding">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-5">
+			<span class="your-hustle-story">
+				Share us your hustle story,to get featured here!
+			</span><br>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+		</div>
+	</div>
+	<div class="wrapper">
+		<button class="btn btn-primary" type="button" onclick="">Yes!</button>
+	</div>
+</div>
+
+<!-- FOLLOW YOUR DREAM -->
+<div class="container-fluid">
+
+	<div class="row" id="last-div">
+		
+		<div class="fairy-tale col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<!-- <h3 class="last-div-text">YOU!</h3> -->
+		</div>	
+
+		<div class="follow-your-dream col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<img src="./img/follow-your-dream.jpg" class="img-responsive">
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<!-- <h3 class="last-div-text">MUST!</h3> -->
+		</div>
+
+	</div>
+	
+</div>
+
+<!--- FOOTER -->
+
+<!-- <footer>
+	<div class="container-fluid">
+		<div class="row text-center">
+
+			<div class="col-12">
+				<h5>&copy; Rahul Bhatt</h5>
+			</div>
+
+		</div>
+		</div>
+	</div>
+</footer> -->
+
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
